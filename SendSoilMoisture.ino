@@ -2,7 +2,7 @@
 void SendSoilMoisture(int soilMoisture) {
 
   // wifiに接続できている場合
-  if (WiFi.status() == WL_CONNECTED) { 
+  if (isWifiConnect()) { 
 
     HTTPClient http;
 

@@ -17,7 +17,7 @@ void setup () {
   Serial.begin(115200);
   WiFi.begin(ssid, password);
  
-  while (WiFi.status() != WL_CONNECTED) {
+  while (!isWifiConnect()) {
     delay(1000);
     Serial.println("Connecting...");
   }
@@ -54,8 +54,3 @@ void loop() {
   delay(1000);
  
 }
-
-
-
-
-

@@ -2,7 +2,7 @@
 JsonObject& GetWeatherJson(const char* weatherUrl) {
   
   // wifiに接続できている場合
-  if (WiFi.status() == WL_CONNECTED) {
+  if (isWifiConnect()) {
 
     StaticJsonBuffer<200> jsonBuffer;  // JSON用の固定バッファを確保
     
